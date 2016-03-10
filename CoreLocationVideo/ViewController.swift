@@ -146,6 +146,14 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
 
 
     }
+    
+    func mapView(mapView:MKMapView!,rendereForOverlay overlay:MKOverlay!)->MKOverlayRenderer
+    {
+        let draw=MKPolylineRenderer(overlay: overlay)
+        draw.strokeColor=UIColor.purpleColor()
+        draw.lineWidth=3.0
+        return draw
+    }
       
 
 }
